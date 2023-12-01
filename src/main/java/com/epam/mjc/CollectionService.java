@@ -1,5 +1,6 @@
 package com.epam.mjc;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -15,7 +16,7 @@ public class CollectionService {
     }
 
     public Optional<Integer> findMax(List<Integer> list) {
-        throw new UnsupportedOperationException("You should implement this method.");
+        return list.stream().max(Integer::compareTo);
     }
 
     public Optional<Integer> findMin(List<List<Integer>> list) {
