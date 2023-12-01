@@ -1,5 +1,6 @@
 package com.epam.mjc;
 
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -20,7 +21,7 @@ public class CollectionService {
     }
 
     public Optional<Integer> findMin(List<List<Integer>> list) {
-        throw new UnsupportedOperationException("You should implement this method.");
+        return list.stream().flatMap(Collection::stream).min(Integer::compareTo);
     }
 
     public Integer sum(List<Integer> list) {
