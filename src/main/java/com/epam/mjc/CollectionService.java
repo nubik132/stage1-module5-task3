@@ -11,7 +11,7 @@ public class CollectionService {
     }
 
     public List<String> toUpperCaseCollection(List<String> list) {
-        throw new UnsupportedOperationException("You should implement this method.");
+        return list.stream().map(String::toUpperCase).collect(Collectors.toList());
     }
 
     public Optional<Integer> findMax(List<Integer> list) {
